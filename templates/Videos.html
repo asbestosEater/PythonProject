@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Videos</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-container {
+            width: 80%;
+            max-width: 1000px;
+            height: 56.25vw;
+            max-height: 560px;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+<link href="static/styles.css" rel="stylesheet"/>
+    <script src="{{ url_for('static', filename='environment.js') }}"></script>
+</head>
+<div class="topbar">
+    <div class="topbar-left">
+        <a href="/" class="logo-link">
+            <img src="https://cdn.discordapp.com/attachments/803663331617275944/1337185732606951444/logo.png?ex=67c0e4c2&is=67bf9342&hm=772b2ad0558e9133d6eb5d22a90b1eaa06ce7d676bd72594e7d9c751bba3a63a&" width = 180 height = 97.8 alt="Logo" class="logo">
+        </a>
+    </div>
+    <div class="topbar-center">
+        <ul class="nav-links">
+            <li><a href="/" class="{{ 'active' if request.endpoint == 'hello_world' else '' }}">HOME</a></li>
+            <li><a href="/leaderboard" class="{{ 'active' if request.endpoint == 'hello_world2' else '' }}">TOP MINIONS</a></li>
+            <li><a href="/videos" class="{{ 'active' if request.endpoint == 'hello_world3' else '' }}">VIDEOS</a></li>
+            <li><a href="/liveminions" class="{{ 'active' if request.endpoint == 'hello_world4' else '' }}">LIVE MINIONS</a></li>
+        </ul>
+    </div>
+    <div class="topbar-right">
+        <button class="loogin-btn">SIGN UP</button>
+        <button class="login-btn">SIGN IN</button>
+    </div>
+</div>
+<iframe width="550" height="315" src="https://www.youtube.com/embed/AgacKZ7zPGk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</html>

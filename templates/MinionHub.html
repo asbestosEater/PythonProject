@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MinionHub</title>
+<link href="static/styles.css" rel="stylesheet"/>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+  <div class="topbar">
+    <div class="topbar-left">
+        <a href="/" class="logo-link">
+            <img src="https://cdn.discordapp.com/attachments/803663331617275944/1337185732606951444/logo.png?ex=67c0e4c2&is=67bf9342&hm=772b2ad0558e9133d6eb5d22a90b1eaa06ce7d676bd72594e7d9c751bba3a63a&" width = 180 height = 97.8 alt="Logo" class="logo">
+        </a>
+    </div>
+    <div class="topbar-center">
+        <ul class="nav-links">
+            <li><a href="/" class="{{ 'active' if request.endpoint == 'hello_world' else '' }}">HOME</a></li>
+            <li><a href="/leaderboard" class="{{ 'active' if request.endpoint == 'hello_world2' else '' }}">TOP MINIONS</a></li>
+            <li><a href="/videos" class="{{ 'active' if request.endpoint == 'hello_world3' else '' }}">VIDEOS</a></li>
+            <li><a href="/liveminions" class="{{ 'active' if request.endpoint == 'hello_world4' else '' }}">LIVE MINIONS</a></li>
+        </ul>
+    </div>
+    <div class="topbar-right">
+        <button class="loogin-btn">SIGN UP</button>
+        <button class="login-btn">SIGN IN</button>
+    </div>
+</div>
+<p id = "header">Hot Minion Content in the USA</p>
+<div class="image-grid">
+    <div class="image-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvUe7PqTfEoekcksim5zpucZWVhHCTO_dv0g&s" alt="Image 1" class="grid-image">
+            <p class="descriptioon">Minion Kings</p>
+            <p class="description">King Bob gives his inauguration speech</p>
+        </div>
+        <div class="image-item">
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5ca7b119-ad0f-4beb-9e0e-2614ef0d02ce/dhpem42-cd94083a-1ce4-42da-b192-3228b9e5191f.jpg/v1/fill/w_1280,h_732,q_75,strp/minions_happy_together_by_andrewmac2024_dhpem42-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzMyIiwicGF0aCI6IlwvZlwvNWNhN2IxMTktYWQwZi00YmViLTllMGUtMjYxNGVmMGQwMmNlXC9kaHBlbTQyLWNkOTQwODNhLTFjZTQtNDJkYS1iMTkyLTMyMjhiOWU1MTkxZi5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.MbQqdeAgnKF5J8pXRcfxD4q-Ewz4VDkr7UysKC01qWY" alt="Image 1" class="grid-image">
+            <p class="descriptioon">BananaBros</p>
+            <p class="description">Gang of minions have a jolly time (wholesome)</p>
+        </div>
+    <div class="image-item">
+            <img src="https://i.ytimg.com/vi/JNmeVsBp8X4/maxresdefault.jpg" alt="Image 1" class="grid-image">
+            <p class="descriptioon">FamilyMinions</p>
+            <p class="description">Bob suffers the consequences of his parents' failing marriage</p>
+        </div>
+    <div class="image-item">
+            <img src="https://i.ytimg.com/vi/f-fX7ZuwGf4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAWGAGtOrcCZ3vRYVBGKVjqyyko6w" alt="Image 1" class="grid-image">
+            <p class="descriptioon">PropertyMinions</p>
+            <p class="description">Bob learns the difficulties of obtaining a realtors license</p>
+        </div>
+    <div class="image-item">
+            <img src="https://i.pinimg.com/736x/a1/de/51/a1de51fd9141a3ec61413088b13bcd38.jpg" alt="Image 1" class="grid-image">
+            <p class="descriptioon">Purpled</p>
+            <p class="description">Rather substantial group of purple minions hang out with a yellow minion</p>
+        </div>
+    <div class="image-item">
+            <img src="https://i.ytimg.com/vi/ZCYgzcPOmdE/maxresdefault.jpg" alt="Image 1" class="grid-image">
+            <p class="descriptioon">MinionStrokes</p>
+            <p class="description">Stuart goes for a swim and practices his (breast) stroke game</p>
+        </div>
+    <div class="image-item">
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1830a728-a6bc-4d97-8cd4-18c1a47b583c/dbhetsa-0687d761-93df-4a08-9fe8-d84a6f002428.jpg/v1/fill/w_1024,h_667,q_75,strp/minions_bus_by_publictransport_dbhetsa-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjY3IiwicGF0aCI6IlwvZlwvMTgzMGE3MjgtYTZiYy00ZDk3LThjZDQtMThjMWE0N2I1ODNjXC9kYmhldHNhLTA2ODdkNzYxLTkzZGYtNGEwOC05ZmU4LWQ4NGE2ZjAwMjQyOC5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.3KBavrF0N8z4t7VpGYSN19v3fwcmk1U-nMJlJQq86P0" alt="Image 1" class="grid-image">
+            <p class="descriptioon">BananaBus</p>
+            <p class="description">Minions board  MASSIVE minion bus for a fun trip</p>
+        </div>
+    <div class="image-item">
+            <img src="https://i.ytimg.com/vi/EwO0xJ-ouMQ/maxresdefault.jpg" alt="Image 1" class="grid-image">
+            <p class="descriptioon">MinionPOV</p>
+            <p class="description">Otto shows off his large (basket) balls</p>
+        </div>
+    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minion Hub</title>
+    <script>
+        window.onload = function() {
+            document.getElementById('ageModal').style.display = "block";
+        };
+
+        function acceptAge() {
+            document.getElementById('ageModal').style.display = "none";
+        }
+
+        function rejectAge() {
+            window.location.href = "https://www.google.com";
+        }
+    </script>
+    <div id="ageModal" class="modal">
+        <div class="modal-content">
+             <img id = logo2 src="https://cdn.discordapp.com/attachments/803663331617275944/1337185732606951444/logo.png?ex=67c0e4c2&is=67bf9342&hm=772b2ad0558e9133d6eb5d22a90b1eaa06ce7d676bd72594e7d9c751bba3a63a&" width = 360 height = 195.6>
+            <h1>This is a website for true minion lovers</h1>
+            <p id = "warning">This website contains restricted materials including minions and dope depictions of minion activity. By entering, you affirm that you are a true minion lover as ruled by the jurisdiction you are accessing the website from and you consent to viewing some baller minion content.</p>
+            <div class="modal-buttons">
+                <button class="modal-button accept" onclick="acceptAge()">I am a true minion lover - Enter</button>
+                <button class="modal-button cancel" onclick="rejectAge()">I am not a true minion lover - Exit</button>
+            </div>
+        </div>
+    </div>
+</head>
+</html>
